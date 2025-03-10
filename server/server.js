@@ -12,7 +12,8 @@ app.use(cors())
 
 await connectDB()
 
-app.get('/',(req,res)=> res.send('Working api dost'))
+app.get('/',(req,res)=> res.send('Working api dost hai'))
+
 app.post('/clerk',express.json(),clerkWebhooks)
 
                   
