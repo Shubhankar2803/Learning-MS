@@ -92,7 +92,7 @@ const stripeInstance=new Stripe(process.env.STRIPE_SECRET_KEY)
         await courseData.save()
         userData.enrolledCourses.push(courseData._id)
         await userData.save()
-        purchaseData.status='competed';
+        purchaseData.status='completed';
         await purchaseData.save()
 
           break;}
