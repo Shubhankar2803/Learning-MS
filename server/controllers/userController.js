@@ -77,9 +77,9 @@ export const getUserData=async(req,res)=>{
             mode:'payment',
             metadata:{
                 purchaseId:newPurchase._id.toString()
-            }
-         })
-         res.json({success:true,session_url:session.url})
+            }  
+         });
+       return  res.json({success:true,session_url:session.url});
 
     } catch (error) {
 
@@ -144,7 +144,8 @@ export const addUserRating=async(req,res)=>{
 
    const userId=req.auth.userId;
    const {courseId,rating}=req.body;
-
+   console.log("Auth Data:", req.auth);
+   console.log(userId,courseId)
    if(!courseId|| !userId ||!rating || rating<1||rating>5){
     return res.json({success:false,message:"Invalid details"})
 

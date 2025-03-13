@@ -1,8 +1,9 @@
 import {clerkClient } from '@clerk/express'
-import {v2 as cloudinary} from 'cloudinary'
+import {v2 as cloudinary} from 'cloudinary' 
 
 import Course from '../models/course.js'
 import { Purchase } from '../models/purchase.js'
+import User from '../models/user.js'
 
 export const updateRoleToEducator=async(req,res)=>{
     try {
@@ -68,8 +69,12 @@ try {
 export const educatorDashboardData=async(req,res)=>{
     try {
         const educator=req.auth.userId;
+        console.log('Edu id: ',educator)
+
         const courses=await Course.find({educator});
         const totalCourses=courses.length;
+        console.log("Courses Found:", courses.length); // Log course count
+
         const courseIds=courses.map(course=>course._id)
 
         //calculating earnings
@@ -80,7 +85,7 @@ export const educatorDashboardData=async(req,res)=>{
         const totalEarnings=purchases.reduce((sum,purchase)=>sum+purchase.amount,0);
         //getting unique students enrolled 
         const enrolledStudentsData=[];
-
+        
         for(const course of courses){
             const students=await User.find({
                 _id:{$in:course.enrolledStudents}
@@ -94,10 +99,14 @@ export const educatorDashboardData=async(req,res)=>{
                 });
             });
         }
-        res.json({succes:true,dashboardData:{
-            totalEarnings,enrolledStudentsData,totalCourses
 
-        }})
+        const dashboardData = {
+            totalEarnings,
+            enrolledStudentsData,
+            totalCourses
+        };
+        console.log(dashboardData)
+        res.json({success:true,dashboardData})
 
     } catch (error) {
         res.json({success:false,message:error.message})
