@@ -55,7 +55,7 @@ const Navbar = () => {
            <div className='flex items-center gap-1 sm:gap-2 max-sm:text-xs'>
            {user && <> <button className='bg-blue-300 text-white px-5 py-2 rounded-full' onClick={becomeEducator}>{isEducator?'Educator Dashboard':'Become Educator'}</button>
 
-           <Link   to='/my-enrollments'>My Enrollments </Link> </>
+           <Link className='bg-blue-600 text-white px-5 py-2 rounded-full'   to='/my-enrollments'>My Enrollments </Link> </>
               }
             
            </div>
