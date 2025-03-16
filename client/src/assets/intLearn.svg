@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="200">
+  <defs>
+    <!-- Gradient for the text -->
+    <linearGradient id="gradText" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6a11cb"/>
+      <stop offset="100%" stop-color="#2575fc"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="500" height="200" fill="white"/>
+  <!-- Icon: Stylized graduation cap -->
+  <polygon points="100,70 180,70 140,110" fill="#333"/>
+  <rect x="135" y="110" width="10" height="10" fill="#333"/>
+  <!-- Logo Text -->
+  <text x="210" y="120" font-family="Montserrat, sans-serif" font-size="36" fill="url(#gradText)">
+    IntelliLearn
+  </text>
+</svg>

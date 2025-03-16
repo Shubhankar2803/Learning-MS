@@ -1,4 +1,9 @@
 import logo from './logo.svg'
+import loggo from './loggo.svg'
+
+import intLearn from './intLearn.svg'
+
+
 import logo_dark from './logo_dark.svg'
 import search_icon from './search_icon.svg'
 import cross_icon from './cross_icon.svg'
@@ -16,7 +21,7 @@ import course_4_thumbnail from './course_4.png'
 import star from './rating_star.svg'
 import star_blank from './star_dull_icon.svg'
 import profile_img_1 from './profile_img_1.png'
-import profile_img_2 from './profile_img_2.png'
+import profile_img_2 from './profile_img_2.png' 
 import profile_img_3 from './profile_img_3.png'
 import arrow_icon from './arrow_icon.svg'
 import down_arrow_icon from './down_arrow_icon.svg'
@@ -42,10 +47,13 @@ import profile_img from './profile_img.png'
 import profile_img2 from './profile_img2.png'
 import profile_img3 from './profile_img3.png'
 import lesson_icon from './lesson_icon.svg'
+import darklogo from './darlogo.svg'
 
 
 export const assets = {
-    logo,
+    logo,loggo,
+    intLearn,
+    darklogo,
     search_icon,
     sketch,
     microsoft_logo,
