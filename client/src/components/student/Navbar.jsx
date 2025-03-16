@@ -53,11 +53,11 @@ const Navbar = () => {
       </div>
       <div className='md:hidden fle items-center gap-2 sm:gap-5 text-gray-500'>
            <div className='flex items-center gap-1 sm:gap-2 max-sm:text-xs'>
-           {user && <> <button className='bg-blue-300 text-white px-5 py-2 rounded-full' onClick={becomeEducator}>{isEducator?'Educator Dashboard':'Become Educator'}</button>
+           {user && <> <button className='bg-blue-600 text-white px-5 py-2 rounded-full' onClick={becomeEducator}>{isEducator?'Educator Dashboard':'Become Educator'}</button>
 
            <Link className='bg-blue-600 text-white px-5 py-2 rounded-full'   to='/my-enrollments'>My Enrollments </Link> </>
               }
-            
+             
            </div>
            {user?<UserButton/>:  <button onClick={()=>openSignIn()}><img src={assets.user_icon} alt="" /></button>}
           
