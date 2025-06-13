@@ -5,11 +5,15 @@ import CoursesSection from '../../components/student/CoursesSection.jsx'
 import Testimonials from '../../components/student/Testimonials.jsx'
 import CalToAction from '../../components/student/CalToAction.jsx'
 import Footer from '../../components/student/Footer.jsx'
+import BackgroundLayout from '../../components/student/BgLayout.jsx'
 
 const Home = () => {
   return (
     <div className='flex flex-col items-center space-y-7 text-center'>
-      <Heero/>
+      <BackgroundLayout imageUrl="/eye.gif">
+        <Heero />
+      </BackgroundLayout>
+
       <Companies/>
       <CoursesSection/>
       <Testimonials/>
