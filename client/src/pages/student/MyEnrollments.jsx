@@ -7,7 +7,7 @@ import axios from 'axios'
 
 const MyEnrollments = () => {
   const {
-    enrolledCourses,
+    enrolledCourses = [], // <-- fallback to empty array
     calculateCourseDuration,
     navigate,
     userData,
